@@ -111,7 +111,9 @@ body {
 		-ms-transform: translate(0%, 0%);
 		transform: translate(0%, 0%);
 	}
-	
+	.container-controls {
+		height: 100%
+	}
 }
 </style>
 <div class="creative-content">
@@ -124,6 +126,7 @@ body {
 		<div class="fixed-center-pos">
 			<!--<img src="images/bro-icon.png">-->
 			<h1 class="txt-center jumbo-font">Fix My Photo, Bro!</h1>
+			<p class="txt-center">Your one stop shop for Photoshop Requests. Submit a photoshop request with the form below and our team of bros will get up in its bizniz.</p>
 			<div id="content">
 				<form id="fix-form" role="form" action="https://getsimpleform.com/messages?form_api_token=09cf1f9c6fad691cfc15678b435db88f" method="post" enctype="multipart/form-data">
 					<input type="hidden" name="redirect_to" value="{{ site.url }}/thank-you">
