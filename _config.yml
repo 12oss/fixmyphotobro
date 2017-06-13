@@ -13,20 +13,21 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: Free Photoshop Requests | Fix My Photo Bro 
+title: Photoshop Requests | Fix My Photo, Bro! 
 email: fixmyphotobro@gmail.com
-description:
-  twitter: 
-  username: 
+description: > # this means to ignore newlines until "baseurl:"
+  Fix My Photo, Bro! Have an image that needs some Photoshop love? Use the form to file a Photoshop Request w/our Photoshop Experts. #FixMyPhotoBro! 
+twitter:
+  username: 2cropcreative
   social:
-  name: Fix My Photo Bro
+  name: Second Crop Creative
   links:
-    - https://twitter.com/
-    - https://www.facebook.com/
-    - https://www.instagram.com/
-    - https://pinterest.com/
-    - https://www.youtube.com/c/
-    - https://vimeo.com/
+    - https://twitter.com/2cropcreative
+    - https://www.facebook.com/secondcropcreative
+    - https://www.instagram.com/secondcropcreative
+    - https://pinterest.com/secondcrop
+    - https://www.youtube.com/c/Secondcropcreativedesign/
+    - https://vimeo.com/secondcropcreative
 github_username:  12oss
 
 # Build settings
@@ -35,14 +36,14 @@ theme:            minima
 
 #Author
 author:
-  twitter: 
+  twitter: 2cropcreative
 
 #Teaser Image
-image: /assets/css/images/
+image: /images/bro-icon.png
 
 
 #Logo
-logo: /assets/css/images/
+#logo: /assets/css/images/
 
 #Pagination
 paginate: 10

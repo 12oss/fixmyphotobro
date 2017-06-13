@@ -1,7 +1,7 @@
 ---
 layout: default
-title: Free Photoshop Requests | #FixMyPhotoBro
-description: Free Photoshop Requests. #FixMyPhotoBro
+title: Photoshop Requests, Photoshop My Photo | Fix My Photo, Bro!
+description: Photoshop My Photo Bro! Have an image that needs some Photoshop love? Use the form to file a Photoshop Request w/our Photoshop Experts.  #FixMyPhotoBro! 
 ---
 <style>
 body {
@@ -28,17 +28,188 @@ video {
 	opacity: .5;
 }
 
+.fixed-center-pos {
+	color: white;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	-webkit-transform: translate(-50%, -50%);
+	-moz-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	padding: 15px;
+}
 
+#bg-img:before {
+	background-image: url("{{ baseurl }}/assets/css/images/patterns/diagmonds.png");
+	background-position: center;
+	background-repeat: repeat;
+	content: " ";
+	display: block;
+	height: 100%;
+	left: 0;
+	/*control bg-img opacity here*/
+	opacity: 1;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: -1;
+}
+
+.container-controls {
+	/*add a color tint*/
+	/*	background-color: rgba(145, 65, 65, 0.4);*/
+	/*add a neat inset shadow*/
+	box-shadow: 0 0 455px 55px rgba(0, 0, 0, 0.33) inset;
+	/*control height of container*/
+	height: 100vh;
+	min-height: 100%;
+	position: relative;
+	color: black;
+}
+
+
+/* green gradient */
+
+html,
+body {
+	background: rgba(50, 230, 160, .75);
+	background: -webkit-linear-gradient(to bottom, rgba(50, 230, 160, .75), rgba(15, 50, 70, .75));
+	background: linear-gradient(to bottom, rgba(50, 230, 160, .75), rgba(15, 50, 70, .75));
+}
+
+
+/* green gradient */
+
+
+/* rose gradient */
+
+
+/*
+html,
+body {
+	background: #FFAFBD;
+	background: -webkit-linear-gradient(to bottom, #ffc3a0, #FFAFBD);
+	background: linear-gradient(to bottom, #ffc3a0, #FFAFBD);
+}
+
+*/
+
+
+/* rose gradient */
+
+@media screen and (max-width: 767px) and (min-width: 1px) {
+	/*(( MOBILE STYLES))*/
+	.fixed-center-pos {
+		position: relative;
+		top: 0px;
+		bottom: 0px;
+		left: 0px;
+		right: 0px;
+		-webkit-transform: translate(0%, 0%);
+		-moz-transform: translate(0%, 0%);
+		-ms-transform: translate(0%, 0%);
+		transform: translate(0%, 0%);
+	}
+	
+}
 </style>
 <div class="creative-content">
 	<!-- begin INTRO-->
-	<section>
-		<video poster="https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/polina.jpg" id="bgvid" playsinline autoplay muted loop>
-			<!-- WCAG general accessibility recommendation is that media such as background video play through only once. Loop turned on for the purposes of illustration; if removed, the end of the video will fade in the same way created by pressing the "Pause" button  -->
+	<section id="bg-img" class="container-controls">
+		<!--<video poster="https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/polina.jpg" id="bgvid" playsinline autoplay muted loop>
 			<source src="http://thenewcode.com/assets/videos/polina.webm" type="video/webm">
 			<source src="http://thenewcode.com/assets/videos/polina.mp4" type="video/mp4">
-		</video>
+		</video>-->
+		<div class="fixed-center-pos">
+			<!--<img src="images/bro-icon.png">-->
+			<h1 class="txt-center jumbo-font">Fix My Photo, Bro!</h1>
+			<div id="content">
+				<form id="fix-form" role="form" action="https://getsimpleform.com/messages?form_api_token=09cf1f9c6fad691cfc15678b435db88f" method="post" enctype="multipart/form-data">
+					<input type="hidden" name="redirect_to" value="{{ site.url }}/thank-you">
+					<input type="hidden" name="_folder" value="rfps">
+					<input type="hidden" name="_spam" value="message">
+					<div class="form-group col-xs-12">
+						<label class="txt-left">Upload Image:</label>
+						<input type="file" name="imgupload" required="true">
+					</div>
+					<div class="col-xs-12 col-sm-6 form-group">
+						<label class="txt-left">Full Name:</label>
+						<input type="text" name="name" placeholder="What Does Your Mother Call You?" class="form-control" required="true">
+					</div>
+					<div class="col-xs-12 col-sm-6 form-group">
+						<label class="txt-left">Email:</label>
+						<input type="text" name="email" placeholder="To return your finished image." class="form-control" required="true">
+					</div>
+					<div class="clearfix"></div>
+					<div class="col-xs-12 form-group">
+						<label class="txt-left">Subject:</label>
+						<input type="text" name="title" placeholder="Give your submission a descriptive subject line." class="form-control" required="true">
+					</div>
+					<div class="clearfix"></div>
+					<div class="form-group col-xs-12">
+						<label class="txt-left">Message/Details for Me:</label>
+						<textarea type="text" name="message" placeholder="Be as descriptive as you can be with what you want done with your image..." class="form-control" required="true"></textarea>
+					</div>
+					<div class="disclaimer col-xs-12 pull-right txt-center">
+						<div class="checkbox">
+							<label>
+								<input type="checkbox" name="terms-n-conditions" value="Yes" required="true"> I agree to the <a style="color:#ccc; text-decoration: underline" class="btn-link" data-toggle="modal" data-target="#myModal">Terms and Conditions.</a>
+							</label>
+						</div>
+						<div class="clearfix"></div>
+					</div>
+					<div class="clearfix"></div>
+					<div class="txt-center">
+						<button type="submit" class="txt-center btn btn-default action-link">Submit</button>
+					</div>
+				</form>
+			</div>
+			<!-- DROP AREA-->
+		</div>
 	</section>
+	<!-- *_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_-->
+	<!-- M O D A L   P O P U P   D E T A I L S -->
+	<!-- *_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_-->
+	<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"> <span aria-hidden="true">×</span> </button>
+					<h1 class="modal-title" id="myModalLabel">Terms &amp; Conditions</h1> </div>
+				<div class="modal-body">
+					<p>Last updated: June 13, 2017</p>
+					<p>Please read these Terms and Conditions ("Terms", "Terms and Conditions") carefully before using the http://fixmyphotobro.com website (the "Service") operated by Fix My Photo, Bro! ("us", "we", or "our").</p>
+					<p>Your access to and use of the Service is conditioned on your acceptance of and compliance with these Terms. These Terms apply to all visitors, users and others who access or use the Service. By accessing or using the Service you agree to be bound by these Terms. If you disagree with any part of the terms then you may not access the Service.</p>
+					<h2>Terms of Service</h2>
+					<p>We can not guarantee completion of all submissions to Fix My Photo, Bro! due to the number of submissions we receive. Submission of an image to Fix My Photo, Bro! is deemed to be an acceptance of these Terms and Conditions.</p>
+					<h2>Copyrights</h2>
+					<p>You guarantee that you are the owner of any images/photos/artwork/etc that are uploaded to Fix My Photo, Bro! or that you've obtain the permission to use them. You will retain ownership/copyrights of the original images/photos/artwork/etc. Fix Your Photo, Bro! will retain copyright to the unique, final Photoshopped version of your image/photo/artwork/etc, and will use it for marketing purposes which may include, but are not limited to, video tutorials, live streams, social media posts, etc. If you intend to use the unique, final Photoshopped version of your image/photo/artwork/etc, you will need to obtain a license from Fix My Photo, Bro!.</p>
+					<h2>Links To Other Web Sites</h2>
+					<p>Our Service may contain links to third-party web sites or services that are not owned or controlled by Fix My Photo, Bro!.</p>
+					<p>Fix My Photo, Bro! has no control over, and assumes no responsibility for, the content, privacy policies, or practices of any third party web sites or services. You further acknowledge and agree that Fix My Photo, Bro! shall not be responsible or liable, directly or indirectly, for any damage or loss caused or alleged to be caused by or in connection with use of or reliance on any such content, goods or services available on or through any such web sites or services. We strongly advise you to read the terms and conditions and privacy policies of any third-party web sites or services that you visit.</p>
+					<h2>Termination</h2>
+					<p>We may terminate or suspend access to our Service immediately, without prior notice or liability, for any reason whatsoever, including without limitation if you breach the Terms. All provisions of the Terms which by their nature should survive termination shall survive termination, including, without limitation, ownership provisions, warranty disclaimers, indemnity and limitations of liability.</p>
+					<h2>Governing Law</h2>
+					<p>These Terms shall be governed and construed in accordance with the laws of Wisconsin, United States, without regard to its conflict of law provisions.</p>
+					<p>Our failure to enforce any right or provision of these Terms will not be considered a waiver of those rights. If any provision of these Terms is held to be invalid or unenforceable by a court, the remaining provisions of these Terms will remain in effect. These Terms constitute the entire agreement between us regarding our Service, and supersede and replace any prior agreements we might have between us regarding the Service.</p>
+					<h2>Changes</h2>
+					<p>We reserve the right, at our sole discretion, to modify or replace these Terms at any time. If a revision is material we will try to provide at least 30 days notice prior to any new terms taking effect. What constitutes a material change will be determined at our sole discretion.</p>
+					<p>By continuing to access or use our Service after those revisions become effective, you agree to be bound by the revised terms. If you do not agree to the new terms, please stop using the Service.</p>
+					<h2>Contact Us</h2>
+					<p>If you have any questions about these Terms, please <a href="mailto:fixmyphotobro@gmail.com?subject=Terms%20and%20conditions">contact us</a>.</p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- *_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_-->
+	<!--  e n d   M O D A L   P O P U P   D E T A I L S  -->
+	<!-- *_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_-->
 	<!-- end intro-->
 </div>
+
+
 

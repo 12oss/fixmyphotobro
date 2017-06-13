@@ -6,4 +6,4 @@ Disallow:
 Disallow: /cgi-bin/
 Disallow: /styleguide/
 Disallow: /_template/
-Sitemap: http://www.fixmyphotobro.com/sitemap.xml
+Sitemap: http://fixmyphotobro.com/sitemap.xml

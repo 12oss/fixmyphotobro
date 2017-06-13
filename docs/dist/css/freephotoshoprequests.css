@@ -7896,7 +7896,7 @@ Main components
 	right: 0;
 	color: #ffffff;
 	padding: 1em;
-	font-family: "proxima-nova-sc-osf-condensed", sans-serif;
+	font-family: "proxima-nova-extra-condensed",sans-serif;
 	font-weight: 600;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
@@ -8053,7 +8053,7 @@ font-family:"proxima-nova-sc-osf-condensed",sans-serif
 }
 
 .proxima-nova-condensed {
-	font-family: "proxima-nova-sc-osf-condensed", sans-serif
+	font-family: "proxima-nova-extra-condensed",sans-serif;
 }
 
 h1, .h1 {
@@ -8129,7 +8129,7 @@ ul.starred li:before {
 	color: white;
 	text-shadow: 0 0 20px black, 0 0 10px black, 0 0 20px black, 0 0 10px black;
 	z-index: 100;
-	font-family: "proxima-nova-sc-osf-condensed", sans-serif;
+	font-family: "proxima-nova-extra-condensed",sans-serif;
 	padding-left: 15px;
 	padding-right: 15px;
 }
@@ -8142,7 +8142,7 @@ ul.starred li:before {
 	color: white;
 	text-shadow: 0 0 20px black, 0 0 10px black, 0 0 20px black, 0 0 10px black;
 	z-index: 100;
-	font-family: "proxima-nova-sc-osf-condensed", sans-serif;
+	font-family: "proxima-nova-extra-condensed",sans-serif;
 	text-align: right;
 	padding-left: 15px;
 	padding-right: 15px;
@@ -8156,7 +8156,7 @@ ul.starred li:before {
 	color: white;
 	text-shadow: 0 0 20px black, 0 0 10px black, 0 0 20px black, 0 0 10px black;
 	z-index: 100;
-	font-family: "proxima-nova-sc-osf-condensed", sans-serif;
+	font-family: "proxima-nova-extra-condensed",sans-serif;
 	text-align: center;
 	-webkit-transform: translateX(-50%);
 	-moz-transform: translateX(-50%);
@@ -8838,7 +8838,7 @@ hr {
 /*BUTTONS*/
 
 .btn {
-	font-family: "proxima-nova-sc-osf-condensed", sans-serif;
+	font-family: "proxima-nova-extra-condensed",sans-serif;
 	margin-top: 15px;
 	margin-left: 5px;
 	margin-right: 5px;

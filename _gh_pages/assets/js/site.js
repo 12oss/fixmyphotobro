@@ -334,7 +334,7 @@ function f1() {
 	/*TYPE KIT*/
 	(function(d) {
 		var config = {
-				kitId: 'jjq4uhk',
+				kitId: 'psx4kbx',
 				scriptTimeout: 3000,
 				async: true
 			},

@@ -2,11 +2,38 @@
 layout: compress
 ---
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="hideload">
 <head>
 	{% seo %}
 	{% include header.html %}
 	<style>
+	.hideload {
+		opacity: 0;
+		transition: transform .4s ease-in-out, opacity .4s ease-in-out;
+		-webkit-transition: -webkit-transform .4s ease-in-out, opacity .4s ease-in-out;
+	}
+
+	.wf-loading,
+	.wf-loading h1,
+	.wf-loading h2 {
+		opacity: 0 !important;
+		
+	}
+
+	.wf-active,
+	.wf-active .tk-gin,
+	.wf-active h1,
+	.wf-active h2,
+	.wf-inactive,
+	.wf-inactive .tk-gin,
+	.wf-inactive h1,
+	.wf-inactive h2 {
+		opacity: 1 !important;
+		transition: transform .8s ease-in-out, opacity .8s ease-in-out;
+		-webkit-transition: -webkit-transform .8s ease-in-out, opacity .8s ease-in-out;
+	}
+
+
 	@font-face {
 		font-family: 'FontAwesome';
 		src: url('{{ site.baseurl }}/dist/css/fonts/fontawesome-webfont.eot');

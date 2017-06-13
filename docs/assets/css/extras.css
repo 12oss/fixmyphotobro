@@ -58,11 +58,11 @@ div#back-to-top {
 		bottom: 35px;
 	}
 	div#back-to-top:hover {
-	width: 54px;
-	height: 54px;
-	right: -2px;
-	bottom: 33px;
-}
+		width: 54px;
+		height: 54px;
+		right: -2px;
+		bottom: 33px;
+	}
 }
 
 
@@ -194,7 +194,7 @@ body {
 .creative-content {
 	/*padding-bottom: 10vh;*/
 	/*height of footer*/
-	padding-top: 51px;
+	/*padding-top: 51px;*/
 	/*accounts for header*/
 }
 
@@ -423,19 +423,19 @@ hr {
 /*BUTTONS*/
 
 .btn {
-	font-family: "proxima-nova-sc-osf-condensed", sans-serif;
-	margin-top: 15px;
-	margin-left: 5px;
-	margin-right: 5px;
+	line-height: 1.8;
+	white-space: nowrap;
+	touch-action: manipulation;
+	-webkit-user-select: none;
 	font-weight: 500;
-	/*border-radius: 500px;*/
-	font-size: 1.4rem;
-	padding: 8px 18px;
-	text-transform: uppercase;
-	letter-spacing: .5px;
-	transition: background-color 0.15s ease 0s, border-color 0.15s ease 0s, color 0.15s ease 0s;
+	font-size: 1.6rem;
+	padding: 4px 18px 1px;
+	letter-spacing: 0.3px;
+	transition: background-color .15s ease 0s, border-color .15s ease 0s, color .15s ease 0s;
 	border-radius: 6px;
-	box-shadow: 0px 0px 5px rgba(255, 255, 255, .3);
+	box-shadow: rgba(255, 255, 255, .298039) 0 0 5px;
+	width: auto;
+	height: auto;
 }
 
 .btn-transparent {
