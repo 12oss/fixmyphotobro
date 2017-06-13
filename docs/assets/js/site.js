@@ -379,6 +379,29 @@ function f1() {
 	});;
 	/*end CLIPBAORD*/
 
+	/* WEBSHIMS for BOOTSTRAP FORMS*/
+	(function() {
+		webshim.setOptions('forms', {
+			lazyCustomMessages: true,
+			iVal: {
+				sel: '.ws-validate',
+				handleBubble: 'hide', 
+
+				
+				errorMessageClass: 'help-block',
+				successWrapperClass: 'has-success',
+				errorWrapperClass: 'has-error',
+
+				
+				fieldWrapper: '.form-group'
+			}
+		});
+
+		
+		webshim.polyfill('forms');
+	})();
+	/* end WEBSHIMS for BOOTSTRAP FORMS*/
+
 
 }
 

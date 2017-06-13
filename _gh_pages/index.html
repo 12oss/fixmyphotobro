@@ -9,25 +9,6 @@ body {
 	background: #000;
 }
 
-video {
-	position: fixed;
-	top: 50%;
-	left: 50%;
-	min-width: 100%;
-	min-height: 100%;
-	width: auto;
-	height: auto;
-	z-index: -100;
-	transform: translateX(-50%) translateY(-50%);
-	background: url('//demosthenes.info/assets/images/polina.jpg') no-repeat;
-	background-size: cover;
-	transition: 1s opacity;
-}
-
-.stopfade {
-	opacity: .5;
-}
-
 .fixed-center-pos {
 	color: white;
 	position: absolute;
@@ -47,6 +28,7 @@ video {
 	content: " ";
 	display: block;
 	height: 100%;
+	min-height: 100%;
 	left: 0;
 	/*control bg-img opacity here*/
 	opacity: 1;
@@ -98,6 +80,17 @@ body {
 
 /* rose gradient */
 
+
+/*ERRORS*/
+
+.has-error .checkbox, .has-error .checkbox-inline, .has-error .control-label, .has-error .form-control-feedback, .has-error .help-block, .has-error .radio, .has-error .radio-inline, .has-error.checkbox label, .has-error.checkbox-inline label, .has-error.radio label, .has-error.radio-inline label{
+	font-size: 12px !important;
+	color: white !important;
+}
+
+
+/*ERRORS*/
+
 @media screen and (max-width: 767px) and (min-width: 1px) {
 	/*(( MOBILE STYLES))*/
 	.fixed-center-pos {
@@ -112,7 +105,7 @@ body {
 		transform: translate(0%, 0%);
 	}
 	.container-controls {
-		height: 100%
+		height: 100%;
 	}
 }
 </style>
@@ -128,36 +121,36 @@ body {
 			<h1 class="txt-center jumbo-font">Fix My Photo, Bro!</h1>
 			<p class="txt-center">Your one stop shop for Photoshop Requests. Submit a photoshop request with the form below and our team of bros will get up in its bizniz.</p>
 			<div id="content">
-				<form id="fix-form" role="form" action="https://getsimpleform.com/messages?form_api_token=09cf1f9c6fad691cfc15678b435db88f" method="post" enctype="multipart/form-data">
+				<form id="fix-form" class="ws-validate" role="form" action="https://getsimpleform.com/messages?form_api_token=09cf1f9c6fad691cfc15678b435db88f" method="post" enctype="multipart/form-data">
 					<input type="hidden" name="redirect_to" value="{{ site.url }}/thank-you">
 					<input type="hidden" name="_folder" value="rfps">
 					<input type="hidden" name="_spam" value="message">
 					<div class="form-group col-xs-12">
 						<label class="txt-left">Upload Image:</label>
-						<input type="file" name="imgupload" required="true">
+						<input type="file" name="imgupload" required>
 					</div>
 					<div class="col-xs-12 col-sm-6 form-group">
 						<label class="txt-left">Full Name:</label>
-						<input type="text" name="name" placeholder="What Does Your Mother Call You?" class="form-control" required="true">
+						<input type="text" name="name" placeholder="What Does Your Mother Call You?" class="form-control" required>
 					</div>
 					<div class="col-xs-12 col-sm-6 form-group">
 						<label class="txt-left">Email:</label>
-						<input type="text" name="email" placeholder="To return your finished image." class="form-control" required="true">
+						<input type="text" name="email" placeholder="To return your finished image." class="form-control" required>
 					</div>
 					<div class="clearfix"></div>
 					<div class="col-xs-12 form-group">
 						<label class="txt-left">Subject:</label>
-						<input type="text" name="title" placeholder="Give your submission a descriptive subject line." class="form-control" required="true">
+						<input type="text" name="title" placeholder="Give your submission a descriptive subject line." class="form-control" required>
 					</div>
 					<div class="clearfix"></div>
 					<div class="form-group col-xs-12">
 						<label class="txt-left">Message/Details for Me:</label>
-						<textarea type="text" name="message" placeholder="Be as descriptive as you can be with what you want done with your image..." class="form-control" required="true"></textarea>
+						<textarea type="text" name="message" placeholder="Be as descriptive as you can be with what you want done with your image..." class="form-control" required></textarea>
 					</div>
-					<div class="disclaimer col-xs-12 pull-right txt-center">
+					<div class="disclaimer col-xs-12 pull-right txt-center form-group">
 						<div class="checkbox">
 							<label>
-								<input type="checkbox" name="terms-n-conditions" value="Yes" required="true"> I agree to the <a style="color:#ccc; text-decoration: underline" class="btn-link" data-toggle="modal" data-target="#myModal">Terms and Conditions.</a>
+								<input type="checkbox" name="terms-n-conditions" value="Yes" required> I agree to the <a style="color:#ccc; text-decoration: underline" class="btn-link" data-toggle="modal" data-target="#myModal">Terms and Conditions.</a>
 							</label>
 						</div>
 						<div class="clearfix"></div>
@@ -213,6 +206,5 @@ body {
 	<!-- *_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_-->
 	<!-- end intro-->
 </div>
-
 
 
