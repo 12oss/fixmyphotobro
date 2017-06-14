@@ -8301,12 +8301,6 @@ a.light-inverse:hover, .light-inverse a:hover {
 
 /*end colors*/
 
-@media (max-width: 1199px) {
-	.jumbo-font {
-		font-size: 4.5rem;
-		line-height: 42px;
-	}
-}
 
 @media (max-width: 991px) {
 	.h1, .h2, .h3, h1, h2, h3 {

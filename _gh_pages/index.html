@@ -4,22 +4,7 @@ title: Photoshop Requests, Photoshop My Photo | Fix My Photo, Bro!
 description: Fix My Photo, Bro! Have an image that needs some Photoshop love? Use the form to file a Photoshop Request w/our Photoshop Experts. #FixMyPhotoBro! 
 ---
 <style>
-body {
-	margin: 0;
-	background: #000;
-}
-
-.fixed-center-pos {
-	color: white;
-	position: absolute;
-	left: 50%;
-	top: 50%;
-	-webkit-transform: translate(-50%, -50%);
-	-moz-transform: translate(-50%, -50%);
-	-ms-transform: translate(-50%, -50%);
-	transform: translate(-50%, -50%);
-	padding: 15px;
-}
+/*BG PATTERNS*/
 
 #bg-img:before {
 	background-image: url("{{ baseurl }}/assets/css/images/patterns/diagmonds.png");
@@ -38,17 +23,81 @@ body {
 	z-index: -1;
 }
 
-.container-controls {
-	/*add a color tint*/
-	/*	background-color: rgba(145, 65, 65, 0.4);*/
-	/*add a neat inset shadow*/
-	box-shadow: 0 0 455px 55px rgba(0, 0, 0, 0.33) inset;
-	/*control height of container*/
-	height: 100vh;
-	min-height: 100%;
-	position: relative;
-	color: black;
+
+/*BG PATTERNS*/
+
+
+/* ALIGNER WITH FLEXBOX*/
+
+.Aligner {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	-ms-flex-align: center;
+	align-items: center;
+	min-height: 100vh;
+	height: 100%;
+	-webkit-box-pack: center;
+	-webkit-justify-content: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	padding: 50px 25px;
 }
+
+.Aligner-item {
+	-webkit-box-flex: 1;
+	-webkit-flex: 1;
+	-ms-flex: 1;
+	flex: 1;
+}
+
+.Aligner-item--top {
+	align-self: flex-start;
+}
+
+.Aligner-item--bottom {
+	align-self: flex-end;
+}
+
+.Aligner-item--fixed {
+	-webkit-box-flex: 0;
+	-webkit-flex: none;
+	-ms-flex: none;
+	flex: none;
+	max-width: 550px;
+	width: 100%;
+}
+
+
+/* ALIGNER WITH FLEXBOX*/
+
+
+/*ERRORS*/
+
+.has-error .checkbox,
+.has-error .checkbox-inline,
+.has-error .control-label,
+.has-error .form-control-feedback,
+.has-error .help-block,
+.has-error .radio,
+.has-error .radio-inline,
+.has-error.checkbox label,
+.has-error.checkbox-inline label,
+.has-error.radio label,
+.has-error.radio-inline label {
+	font-size: 12px !important;
+	color: #ffcc66 !important;
+}
+
+.has-error .form-control {
+	border: #ffcc33 3px solid;
+}
+
+
+/*ERRORS*/
 
 
 /* green gradient */
@@ -58,6 +107,7 @@ body {
 	background: rgba(50, 230, 160, .75);
 	background: -webkit-linear-gradient(to bottom, rgba(50, 230, 160, .75), rgba(15, 50, 70, .75));
 	background: linear-gradient(to bottom, rgba(50, 230, 160, .75), rgba(15, 50, 70, .75));
+	box-shadow: 0 0 455px 55px rgba(0, 0, 0, 0.33) inset;
 }
 
 
@@ -80,90 +130,56 @@ body {
 
 /* rose gradient */
 
-
-/*ERRORS*/
-
-.has-error .checkbox, .has-error .checkbox-inline, .has-error .control-label, .has-error .form-control-feedback, .has-error .help-block, .has-error .radio, .has-error .radio-inline, .has-error.checkbox label, .has-error.checkbox-inline label, .has-error.radio label, .has-error.radio-inline label{
-	font-size: 12px !important;
+.white-it {
 	color: white !important;
 }
-
-
-/*ERRORS*/
-
-@media screen and (max-width: 767px) and (min-width: 1px) {
-	/*(( MOBILE STYLES))*/
-	.fixed-center-pos {
-		position: relative;
-		top: 0px;
-		bottom: 0px;
-		left: 0px;
-		right: 0px;
-		-webkit-transform: translate(0%, 0%);
-		-moz-transform: translate(0%, 0%);
-		-ms-transform: translate(0%, 0%);
-		transform: translate(0%, 0%);
-	}
-	.container-controls {
-		height: 100%;
-	}
-}
 </style>
-<div class="creative-content">
-	<!-- begin INTRO-->
-	<section id="bg-img" class="container-controls">
-		<!--<video poster="https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/polina.jpg" id="bgvid" playsinline autoplay muted loop>
-			<source src="http://thenewcode.com/assets/videos/polina.webm" type="video/webm">
-			<source src="http://thenewcode.com/assets/videos/polina.mp4" type="video/mp4">
-		</video>-->
-		<div class="fixed-center-pos">
-			<!--<img src="images/bro-icon.png">-->
+<div class="creative-content container-controls">
+	<div id="bg-img" class="Aligner">
+		<div class="Aligner-item Aligner-item--fixed white-it">
 			<h1 class="txt-center jumbo-font">Fix My Photo, Bro!</h1>
 			<p class="txt-center">Your one stop shop for Photoshop Requests. Submit a photoshop request with the form below and our team of bros will get up in its bizniz.</p>
-			<div id="content">
-				<form id="fix-form" class="ws-validate" role="form" action="https://getsimpleform.com/messages?form_api_token=09cf1f9c6fad691cfc15678b435db88f" method="post" enctype="multipart/form-data">
-					<input type="hidden" name="redirect_to" value="{{ site.url }}/thank-you">
-					<input type="hidden" name="_folder" value="rfps">
-					<input type="hidden" name="_spam" value="message">
-					<div class="form-group col-xs-12">
-						<label class="txt-left">Upload Image:</label>
-						<input type="file" name="imgupload" required>
-					</div>
-					<div class="col-xs-12 col-sm-6 form-group">
-						<label class="txt-left">Full Name:</label>
-						<input type="text" name="name" placeholder="What Does Your Mother Call You?" class="form-control" required>
-					</div>
-					<div class="col-xs-12 col-sm-6 form-group">
-						<label class="txt-left">Email:</label>
-						<input type="text" name="email" placeholder="To return your finished image." class="form-control" required>
-					</div>
-					<div class="clearfix"></div>
-					<div class="col-xs-12 form-group">
-						<label class="txt-left">Subject:</label>
-						<input type="text" name="title" placeholder="Give your submission a descriptive subject line." class="form-control" required>
-					</div>
-					<div class="clearfix"></div>
-					<div class="form-group col-xs-12">
-						<label class="txt-left">Message/Details for Me:</label>
-						<textarea type="text" name="message" placeholder="Be as descriptive as you can be with what you want done with your image..." class="form-control" required></textarea>
-					</div>
-					<div class="disclaimer col-xs-12 pull-right txt-center form-group">
-						<div class="checkbox">
-							<label>
-								<input type="checkbox" name="terms-n-conditions" value="Yes" required> I agree to the <a style="color:#ccc; text-decoration: underline" class="btn-link" data-toggle="modal" data-target="#myModal">Terms and Conditions.</a>
-							</label>
-						</div>
-						<div class="clearfix"></div>
+			<form id="fix-form" class="ws-validate" role="form" action="https://getsimpleform.com/messages?form_api_token=09cf1f9c6fad691cfc15678b435db88f" method="post" enctype="multipart/form-data">
+				<input type="hidden" name="redirect_to" value="{{ site.url }}/thank-you">
+				<input type="hidden" name="_folder" value="rfps">
+				<input type="hidden" name="_spam" value="message">
+				<div class="form-group col-xs-12">
+					<label class="txt-left">Upload Image:</label>
+					<input type="file" name="imgupload" required>
+				</div>
+				<div class="col-xs-12 col-sm-6 form-group">
+					<label class="txt-left">Full Name:</label>
+					<input type="text" name="name" placeholder="What Does Your Mother Call You?" class="form-control" required>
+				</div>
+				<div class="col-xs-12 col-sm-6 form-group">
+					<label class="txt-left">Email:</label>
+					<input type="text" name="email" placeholder="To return your finished image." class="form-control" required>
+				</div>
+				<div class="clearfix"></div>
+				<div class="col-xs-12 form-group">
+					<label class="txt-left">Subject:</label>
+					<input type="text" name="title" placeholder="Give your submission a descriptive subject line." class="form-control" required>
+				</div>
+				<div class="clearfix"></div>
+				<div class="form-group col-xs-12">
+					<label class="txt-left">Message/Details for Me:</label>
+					<textarea type="text" name="message" placeholder="Be as descriptive as you can be with what you want done with your image..." class="form-control" required></textarea>
+				</div>
+				<div class="disclaimer col-xs-12 pull-right txt-center form-group">
+					<div class="checkbox">
+						<label>
+							<input type="checkbox" name="terms-n-conditions" value="Yes" required> I agree to the <a style="color:#ccc; text-decoration: underline" class="btn-link" data-toggle="modal" data-target="#myModal">Terms and Conditions.</a>
+						</label>
 					</div>
 					<div class="clearfix"></div>
-					<div class="txt-center">
-						<button type="submit" class="txt-center btn btn-default action-link">Submit</button>
-					</div>
-				</form>
-			</div>
-			<!-- DROP AREA-->
+				</div>
+				<div class="clearfix"></div>
+				<div class="txt-center">
+					<button type="submit" class="txt-center btn btn-default action-link">Submit</button>
+				</div>
+			</form>
 		</div>
-	</section>
+	</div>
 	<!-- *_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_-->
 	<!-- M O D A L   P O P U P   D E T A I L S -->
 	<!-- *_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_-->
@@ -204,7 +220,6 @@ body {
 	<!-- *_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_-->
 	<!--  e n d   M O D A L   P O P U P   D E T A I L S  -->
 	<!-- *_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_-->
-	<!-- end intro-->
 </div>
 
 

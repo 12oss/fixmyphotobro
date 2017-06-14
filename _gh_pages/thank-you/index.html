@@ -4,22 +4,7 @@ title: Thank You For Your Photoshop Request!
 description: 
 ---
 <style>
-body {
-	margin: 0;
-	background: #000;
-}
-
-.fixed-center-pos {
-	color: white;
-	position: absolute;
-	left: 50%;
-	top: 50%;
-	-webkit-transform: translate(-50%, -50%);
-	-moz-transform: translate(-50%, -50%);
-	-ms-transform: translate(-50%, -50%);
-	transform: translate(-50%, -50%);
-	padding: 15px;
-}
+/*BG PATTERNS*/
 
 #bg-img:before {
 	background-image: url("{{ baseurl }}/assets/css/images/patterns/diagmonds.png");
@@ -38,17 +23,56 @@ body {
 	z-index: -1;
 }
 
-.container-controls {
-	/*add a color tint*/
-	/*	background-color: rgba(145, 65, 65, 0.4);*/
-	/*add a neat inset shadow*/
-	box-shadow: 0 0 455px 55px rgba(0, 0, 0, 0.33) inset;
-	/*control height of container*/
-	height: 100vh;
-	min-height: 100%;
-	position: relative;
-	color: black;
+
+/*BG PATTERNS*/
+
+
+/* ALIGNER WITH FLEXBOX*/
+
+.Aligner {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	-ms-flex-align: center;
+	align-items: center;
+	min-height: 100vh;
+	height: 100%;
+	-webkit-box-pack: center;
+	-webkit-justify-content: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	padding: 50px 25px;
 }
+
+.Aligner-item {
+	-webkit-box-flex: 1;
+	-webkit-flex: 1;
+	-ms-flex: 1;
+	flex: 1;
+}
+
+.Aligner-item--top {
+	align-self: flex-start;
+}
+
+.Aligner-item--bottom {
+	align-self: flex-end;
+}
+
+.Aligner-item--fixed {
+	-webkit-box-flex: 0;
+	-webkit-flex: none;
+	-ms-flex: none;
+	flex: none;
+	max-width: 550px;
+	width: 100%;
+}
+
+
+/* ALIGNER WITH FLEXBOX*/
 
 
 /* green gradient */
@@ -58,6 +82,7 @@ body {
 	background: rgba(50, 230, 160, .75);
 	background: -webkit-linear-gradient(to bottom, rgba(50, 230, 160, .75), rgba(15, 50, 70, .75));
 	background: linear-gradient(to bottom, rgba(50, 230, 160, .75), rgba(15, 50, 70, .75));
+	box-shadow: 0 0 455px 55px rgba(0, 0, 0, 0.33) inset;
 }
 
 
@@ -80,34 +105,17 @@ body {
 
 /* rose gradient */
 
-@media screen and (max-width: 767px) and (min-width: 1px) {
-	/*(( MOBILE STYLES))*/
-	.fixed-center-pos {
-		position: relative;
-		top: 0px;
-		bottom: 0px;
-		left: 0px;
-		right: 0px;
-		-webkit-transform: translate(0%, 0%);
-		-moz-transform: translate(0%, 0%);
-		-ms-transform: translate(0%, 0%);
-		transform: translate(0%, 0%);
-	}
-	.container-controls {
-		min-height: 100%;
-	}
+.white-it {
+	color: white !important;
 }
 </style>
-<div class="creative-content">
-	<!-- begin INTRO-->
-	<section id="bg-img" class="container-controls">
-		<div class="fixed-center-pos">
+<div class="creative-content container-controls">
+	<div id="bg-img" class="Aligner">
+		<div class="Aligner-item Aligner-item--fixed white-it">
 			<h1>Thank you for your Photoshop Request!</h1>
 			<p>The Bros will try to have someone look into your request in a timely manner. In the meantime, feel free to buy us a beer; it fuels our bro-ness, &amp; our services!</p>
 			<a class="btn btn-inverse action-link" href="//paypal.me/12oss" target="_blank">Buy a Bro a Beer</a>
 			<a class="btn btn-default action-link" href="/">Fix Another Photo</a>
 		</div>
-	</section>
+	</div>
 </div>
-
-
