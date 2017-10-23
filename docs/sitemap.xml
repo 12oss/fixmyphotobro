@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
-<loc>http://localhost:12011/styleguide/</loc>
+<loc>https://fixmyphotobro.com/styleguide/</loc>
 </url>
 <url>
-<loc>http://localhost:12011/thank-you/</loc>
+<loc>https://fixmyphotobro.com/thank-you/</loc>
 </url>
 <url>
-<loc>http://localhost:12011/</loc>
+<loc>https://fixmyphotobro.com/</loc>
 </url>
 <url>
-<loc>http://localhost:12011/google746a12b6e2fc1c2a.html</loc>
+<loc>https://fixmyphotobro.com/google746a12b6e2fc1c2a.html</loc>
 <lastmod>2017-04-10T10:13:38-05:00</lastmod>
 </url>
 </urlset>

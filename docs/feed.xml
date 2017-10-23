@@ -4,8 +4,8 @@
     <channel>
         <title>#FixMyPhotoBro</title>
         <description>Latest blog posts from #FixMyPhotoBro</description>
-        <link>http://localhost:12011/blog</link>
-        <atom:link href="http://localhost:12011/feed.xml" rel="self" type="application/rss+xml" />
+        <link>https://fixmyphotobro.com/blog</link>
+        <atom:link href="https://fixmyphotobro.com/feed.xml" rel="self" type="application/rss+xml" />
         
     </channel>
 </rss>
