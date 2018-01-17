@@ -22,6 +22,7 @@
     "ssi": "^0.1.5"
   },
   "dependencies": {
-    "connect-include": "^0.2.3"
+    "connect-include": "^0.2.3",
+    "grunt-cli": "^1.2.0"
   }
 }
